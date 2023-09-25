@@ -19,8 +19,5 @@ class ViewController: UIViewController {
     @IBAction func changeButton(_ sender: UIButton) {
         imageView.image = UIImage(named: "image2")
     }
-    
-    
-    
 }
 
