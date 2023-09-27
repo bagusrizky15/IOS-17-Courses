@@ -13,18 +13,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var birthdayField: UITextField!
     @IBOutlet weak var birthdayLabel: UILabel!
+    
+    let storedName = UserDefaults.standard.object(forKey: "name")
+    let storedBirthDay = UserDefaults.standard.object(forKey: "birthDay")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let storedName = UserDefaults.standard.object(forKey: "name")
-        let storedBirthDay = UserDefaults.standard.object(forKey: "birthDay")
         
         if let myName = storedName as? String{
-            nameLabel.text = myName
+            nameLabel.text = "Name : \(myName)"
         }
         
         if let myBirthday = storedBirthDay as? String{
-            birthdayLabel.text = myBirthday
+            birthdayLabel.text = "Birthday : \(myBirthday)"
         }
         
     }
@@ -36,6 +38,20 @@ class ViewController: UIViewController {
         
         nameLabel.text = "Name : \(nameField.text!)"
         birthdayLabel.text = "Birthday : \(birthdayField.text!)"
+        
+    }
+    
+    
+    @IBAction func deleteButton(_ sender: Any) {
+        
+        if storedName as? String != nil{
+            UserDefaults.standard.removeObject(forKey: "name")
+            nameLabel.text = "Name : "
+        }
+        if storedBirthDay as? String != nil{
+            UserDefaults.standard.removeObject(forKey: "birthDay")
+            birthdayLabel.text = "Birthday : "
+        }
         
     }
     
