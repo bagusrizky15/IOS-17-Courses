@@ -6,15 +6,21 @@
 //
 
 import UIKit
+import Flutter
+import FlutterPluginRegistrant
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    lazy var flutterEngine = FlutterEngine(name: "my flutter engine")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        flutterEngine.run()
+        GeneratedPluginRegistrant.register(with: self.flutterEngine)
         // Override point for customization after application launch.
         return true
+//        super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
     // MARK: UISceneSession Lifecycle

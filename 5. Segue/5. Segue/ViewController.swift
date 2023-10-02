@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Flutter
 
 class ViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -22,6 +24,12 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "toSecondVC", sender: nil)
     }
     
+    @IBAction func runFlutterButton(_ sender: UIButton) {
+//        let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).flutterEngine
+        let flutterViewController = FlutterViewController(project: nil, nibName: nil, bundle: nil)
+        flutterViewController.modalPresentationStyle = .fullScreen
+        present(flutterViewController, animated: true)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSecondVC" {
             let desinationVC = segue.destination as! SecondViewController
