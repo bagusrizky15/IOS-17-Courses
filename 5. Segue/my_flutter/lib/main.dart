@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Page'),
+      home: const MyHomePage(title: 'Flutter Page on Swift'),
     );
   }
 }
@@ -29,6 +30,13 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  // static backToNative(BuildContext context) {
+  //   SystemNavigator.pop();
+    // FocusScope.of(context).unfocus();
+    // var routeName = ModalRoute.of(context)?.settings.name;
+    // Navigator.of(context).popAndPushNamed(routeName!);
+  // }
+
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -39,6 +47,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: BackButton(
+          onPressed: () => SystemNavigator.pop(),
+        ),
         title: Text(widget.title),
       ),
       body: Center(
