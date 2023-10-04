@@ -9,18 +9,15 @@ import UIKit
 import LocalAuthentication
 
 class BiometricViewController: UIViewController {
-
-    @IBOutlet weak var biometricTap: UIImageView!
     
+    @IBOutlet weak var biometricTap: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         biometricTap.isUserInteractionEnabled = true
         let tapped = UITapGestureRecognizer(target: self, action: #selector(tapFaceId))
         biometricTap.addGestureRecognizer(tapped)
-     }
-    
-    
+    }
     @IBAction func loginButton(_ sender: UIButton) {
         LoginFaceId()
     }
@@ -31,34 +28,30 @@ class BiometricViewController: UIViewController {
     
     func LoginFaceId(){
         //biometric
-        var context = LAContext()
+        let context = LAContext()
         var error : NSError? = nil
         
-        var permissions = context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error)
-        if permissions {
-            // Proceed to authentication
-        }
-        else {
-            // Handle permission denied or error
-        }
-        
-        let reason = "Log in with Face ID"
-        context.evaluatePolicy(
-            // .deviceOwnerAuthentication allows
-            // biometric or passcode authentication
-            .deviceOwnerAuthentication,
-            localizedReason: reason
-        ) { success, error in
-            if success {
-                print("success")
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "toSecondVC", sender: self)
+        //cek permission
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics,
+                                     error: &error){
+            let reason = "Log in with Face ID"
+            context.evaluatePolicy(
+                .deviceOwnerAuthenticationWithBiometrics,
+                localizedReason: reason
+            ) { [weak self] success, error in
+                
+                guard success, error == nil else {
+                    //failed
+                    return
                 }
-            } else {
-                print("Error")
-                // Handle LAError error
+                //success
+                DispatchQueue.main.async {
+                    self!.performSegue(withIdentifier: "toSecondVC", sender: self)
+                }
+            }
+        }
+            else {
+                // can not use
             }
         }
     }
-    
-}
