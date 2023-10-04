@@ -46,12 +46,8 @@
                                 <rect key="frame" x="38" y="376" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frog" translatesAutoresizingMaskIntoConstraints="NO" id="vnU-m3-ADD">
-                                <rect key="frame" x="146" y="376" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frog" translatesAutoresizingMaskIntoConstraints="NO" id="iGa-vF-oH3">
-                                <rect key="frame" x="254" y="376" width="100" height="100"/>
+                                <rect key="frame" x="146" y="379" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frog" translatesAutoresizingMaskIntoConstraints="NO" id="LIg-zd-SHs">
@@ -73,6 +69,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frog" translatesAutoresizingMaskIntoConstraints="NO" id="0R3-fq-B1Y" userLabel="Frog6">
+                                <rect key="frame" x="254" y="379" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -84,7 +84,7 @@
                         <outlet property="frog3" destination="3Co-rc-S5p" id="5eO-yL-QPC"/>
                         <outlet property="frog4" destination="Tvb-OA-kbx" id="CCt-uB-Uiu"/>
                         <outlet property="frog5" destination="iGa-vF-oH3" id="xAn-eJ-zVL"/>
-                        <outlet property="frog6" destination="iGa-vF-oH3" id="FF5-a3-FuS"/>
+                        <outlet property="frog6" destination="0R3-fq-B1Y" id="kKd-mw-5av"/>
                         <outlet property="frog7" destination="LIg-zd-SHs" id="x9k-HI-sB2"/>
                         <outlet property="frog8" destination="3EG-J5-PGL" id="bHF-Mw-H18"/>
                         <outlet property="frog9" destination="7ea-E9-D7x" id="PtR-hZ-OQy"/>
