@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		961DE2DF2ACD135600DC961A /* BiometricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961DE2DE2ACD135600DC961A /* BiometricViewController.swift */; };
 		96EC8DD82ACCF6AC0054D37E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EC8DD72ACCF6AC0054D37E /* AppDelegate.swift */; };
 		96EC8DDA2ACCF6AC0054D37E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EC8DD92ACCF6AC0054D37E /* SceneDelegate.swift */; };
 		96EC8DDC2ACCF6AC0054D37E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EC8DDB2ACCF6AC0054D37E /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		961DE2DE2ACD135600DC961A /* BiometricViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricViewController.swift; sourceTree = "<group>"; };
 		96EC8DD42ACCF6AC0054D37E /* 9. Catch the Kenny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "9. Catch the Kenny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EC8DD72ACCF6AC0054D37E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96EC8DD92ACCF6AC0054D37E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				96EC8DD72ACCF6AC0054D37E /* AppDelegate.swift */,
 				96EC8DD92ACCF6AC0054D37E /* SceneDelegate.swift */,
 				96EC8DDB2ACCF6AC0054D37E /* ViewController.swift */,
+				961DE2DE2ACD135600DC961A /* BiometricViewController.swift */,
 				96EC8DDD2ACCF6AC0054D37E /* Main.storyboard */,
 				96EC8DE02ACCF6AE0054D37E /* Assets.xcassets */,
 				96EC8DE22ACCF6AE0054D37E /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96EC8DDC2ACCF6AC0054D37E /* ViewController.swift in Sources */,
+				961DE2DF2ACD135600DC961A /* BiometricViewController.swift in Sources */,
 				96EC8DD82ACCF6AC0054D37E /* AppDelegate.swift in Sources */,
 				96EC8DDA2ACCF6AC0054D37E /* SceneDelegate.swift in Sources */,
 			);
@@ -290,11 +294,12 @@
 				DEVELOPMENT_TEAM = M85VR7MMDY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "9. Catch the Kenny/Info.plist";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +307,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bagusrizky.---Catch-the-Kenny";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,11 +326,12 @@
 				DEVELOPMENT_TEAM = M85VR7MMDY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "9. Catch the Kenny/Info.plist";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +339,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bagusrizky.---Catch-the-Kenny";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

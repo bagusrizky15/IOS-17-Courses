@@ -68,6 +68,11 @@ class ViewController: UIViewController {
     @objc func countTime(){
         timeLabel.text = "Timer: \(counter)"
         counter -= 1
+        
+        if counter == 0 {
+            timer.invalidate()
+            timeLabel.text = "Time's Up"
+        }
     }
 
     @objc func increaseScore(){
