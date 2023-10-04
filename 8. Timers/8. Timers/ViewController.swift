@@ -23,6 +23,20 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func buttonClick(_ sender: UIButton) {
+        count = (count) ? false : true
+        
+        if count {
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAY), userInfo: nil, repeats: true)
+            buttonLabel.setTitle("Stop", for: .disabled)
+            buttonLabel.tintColor = .systemRed
+        } else {
+            timer.invalidate()
+            buttonLabel.setTitle("Start", for: .normal)
+            buttonLabel.tintColor = .blue
+        }
+    }
+    
     @objc func timerAY(){
         timeLabel.text = "Time: \(counter)"
         counter -= 1
@@ -32,24 +46,5 @@ class ViewController: UIViewController {
             timeLabel.text = "Time's Up"
         }
     }
-
-    @IBAction func buttonClick(_ sender: UIButton) {
-        count = (count) ? false : true
-        
-        if count {
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAY), userInfo: nil, repeats: true)
-            buttonLabel.titleLabel?.text! = "Stop"
-            print(buttonLabel.titleLabel?.text!)
-            buttonLabel.tintColor = .systemRed
-        } else {
-            timer.invalidate()
-            buttonLabel.titleLabel?.text! = "Start"
-            print(buttonLabel.titleLabel?.text!)
-            buttonLabel.tintColor = .blue
-        }
-        
-        
-    }
-    
 }
 
