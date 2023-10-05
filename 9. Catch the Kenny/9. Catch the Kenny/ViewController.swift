@@ -115,7 +115,10 @@ class ViewController: UIViewController {
                 
                 
             }
-            let cancelButton = UIAlertAction(title: "No", style: UIAlertAction.Style.cancel)
+            let cancelButton = UIAlertAction(title: "No", style: UIAlertAction.Style.cancel){
+                (UIAlertAction) in
+                self.performSegue(withIdentifier: "toFirstVC", sender: nil)
+            }
             
             alert.addAction(playAgain)
             alert.addAction(cancelButton)
