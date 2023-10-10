@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		962C7DF62AD54ED4009EA055 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C7DF52AD54ED4009EA055 /* DetailsViewController.swift */; };
 		9687C6F72ACE634000CD4B44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9687C6F62ACE634000CD4B44 /* AppDelegate.swift */; };
 		9687C6F92ACE634000CD4B44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9687C6F82ACE634000CD4B44 /* SceneDelegate.swift */; };
 		9687C6FB2ACE634000CD4B44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9687C6FA2ACE634000CD4B44 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		962C7DF52AD54ED4009EA055 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		9687C6F32ACE634000CD4B44 /* 10. Landmark Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "10. Landmark Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9687C6F62ACE634000CD4B44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9687C6F82ACE634000CD4B44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				9687C6FF2ACE634100CD4B44 /* Assets.xcassets */,
 				9687C7012ACE634100CD4B44 /* LaunchScreen.storyboard */,
 				9687C7042ACE634100CD4B44 /* Info.plist */,
+				962C7DF52AD54ED4009EA055 /* DetailsViewController.swift */,
 			);
 			path = "10. Landmark Book";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				9687C6FB2ACE634000CD4B44 /* ViewController.swift in Sources */,
 				9687C6F72ACE634000CD4B44 /* AppDelegate.swift in Sources */,
 				9687C6F92ACE634000CD4B44 /* SceneDelegate.swift in Sources */,
+				962C7DF62AD54ED4009EA055 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
